@@ -1,0 +1,32 @@
+{
+    "name": "cdli/modal-selector",
+    "description": "Extensible, twitter-bootstrap-based modal selector dialog for ZF2",
+    "version": "0.0.1",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "zf2", "zfcuser", "modal", "selector"
+    ],
+    "homepage": "https://github.com/cdli/CdliModalSelector",
+    "authors": [
+        {
+            "name": "Adam Lundrigan",
+            "email": "adamlundrigan@cdli.ca",
+            "homepage": "http://www.cdli.ca/"
+        }
+    ],
+    "require": {
+        "zendframework/zendframework": "dev-master"
+    },
+    "suggest": {
+        "zf-commons/zfc-user": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "CdliUserProfile": "src/"
+        },
+        "classmap": [
+            "./"
+        ]
+    }
+}
