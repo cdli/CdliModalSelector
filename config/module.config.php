@@ -1,10 +1,5 @@
 <?php
 return array(
-    'controllers' => array(
-        'invokables' => array(
-            'cdli-modal-selector_ds_zfcuser' => 'CdliModalSelector\Controller\Datasource\ZfcUserController',
-        ),
-    ),
     'router' => array(
         'routes' => array(
             'cdli-modal-selector_ds_zfcuser' => array(
