@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "zendframework/zendframework": "dev-master"
+        "zendframework/zendframework": "2.*"
     },
     "suggest": {
         "zf-commons/zfc-user": "dev-master"
