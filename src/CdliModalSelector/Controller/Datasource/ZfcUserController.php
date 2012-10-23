@@ -3,6 +3,7 @@ namespace CdliModalSelector\Controller\Datasource;
 
 use Zend\Mvc\Controller\AbstractRestfulController;
 use Zend\View\Model\JsonModel;
+use ZfcUser\Mapper\User as UserMapper;
 
 class ZfcUserController extends AbstractRestfulController
 {
@@ -65,11 +66,17 @@ class ZfcUserController extends AbstractRestfulController
     }    
 
     protected $userMapper;
-    protected function getUserMapper()
+    public function getUserMapper()
     {
         if (is_null($this->userMapper)) {
             $this->userMapper = $this->getServiceLocator()->get('zfcuser_user_mapper');
         }
         return $this->userMapper;
+    }
+
+    public function setUserMapper(UserMapper $m)
+    {
+        $this->userMapper = $m;
+        return $this;
     }
 }
