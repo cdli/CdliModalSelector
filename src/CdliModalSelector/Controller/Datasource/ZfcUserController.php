@@ -13,11 +13,9 @@ class ZfcUserController extends AbstractRestfulController
      */
     public function getList()
     {
-        $select = new \Zend\Db\Sql\Select();
-        $select->from('user')->order('display_name ASC')->order('username ASC');
-
         $mapper = $this->getUserMapper();
-        $resultset = $mapper->selectWith($select)->toArray(false);
+        $select = $mapper->getSelect('user')->order('display_name ASC')->order('username ASC');
+        $resultset = $mapper->select($select)->toArray(false);
         foreach ( $resultset as $k=>$v ) unset($resultset[$k]['password']);
 
         return new JsonModel(array(
