@@ -15,7 +15,7 @@ class ZfcUserController extends AbstractRestfulController
     public function getList()
     {
         $mapper = $this->getUserMapper();
-        $select = $mapper->getSelect('user')->order('display_name ASC')->order('username ASC');
+        $select = $mapper->getSelect()->order('display_name ASC')->order('username ASC');
         $resultset = $mapper->select($select)->toArray(false);
         foreach ( $resultset as $k=>$v ) unset($resultset[$k]['password']);
 
