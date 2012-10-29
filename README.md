@@ -9,7 +9,7 @@ CdliUserProfile is a [ZF2](http://github.com/zendframework/zf2) module which pro
 
 Bundled Datasources:
 
-* [`ZfcUser`](https://github.com/ZF-Commons/ZfcUser) - Requires that ZfcUser be installed and configured
+* [ZfcUser](https://github.com/ZF-Commons/ZfcUser) (Requires that ZfcUser be installed and configured)
 
 **NOTE: This module is still under heavy development, and is highly unlikely to work properly or safely at this time**
 
