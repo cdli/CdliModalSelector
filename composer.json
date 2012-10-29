@@ -19,7 +19,8 @@
         "zendframework/zendframework": "2.*"
     },
     "suggest": {
-        "zf-commons/zfc-user": "dev-master"
+        "zf-commons/zfc-user": "Use ZfcUser accounts as datasource for modal selector",
+        "rwoverdijk/assetmanager": "Manage static assets (Javascript files)",
     },
     "autoload": {
         "psr-0": {
