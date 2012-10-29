@@ -1,7 +1,7 @@
 {
     "name": "cdli/modal-selector",
     "description": "Extensible, twitter-bootstrap-based modal selector dialog for ZF2",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "type": "library",
     "license": "BSD-3-Clause",
     "keywords": [
