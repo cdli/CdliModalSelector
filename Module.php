@@ -47,10 +47,21 @@ class Module implements
     {
         return array(
             'factories' => array(
-                'cdlimodalselector_mapper_zfcuser' => function ($sm) {
+                'cdlimodalselector_mapper_zfcuser_zenddb' => function ($sm) {
                     $options = $sm->get('zfcuser_module_options');
-                    $mapper = new Mapper\ZfcUser();
+                    $mapper = new Mapper\ZfcUserZendDb();
                     $mapper->setDbAdapter($sm->get('zfcuser_zend_db_adapter'));
+                    $entityClass = $options->getUserEntityClass();
+                    $mapper->setEntityPrototype(new $entityClass);
+                    $mapper->setHydrator(new \ZfcUser\Mapper\UserHydrator());
+                    return $mapper;
+                },
+                'cdlimodalselector_mapper_zfcuser_doctrine' => function ($sm) {
+                    $options = $sm->get('zfcuser_module_options');
+                    $mapper = new Mapper\ZfcUserDoctrineORM(
+                        $sm->get('zfcuser_doctrine_em'),
+                        $sm->get('zfcuser_module_options')
+                    );
                     $entityClass = $options->getUserEntityClass();
                     $mapper->setEntityPrototype(new $entityClass);
                     $mapper->setHydrator(new \ZfcUser\Mapper\UserHydrator());
