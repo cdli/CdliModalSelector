@@ -85,6 +85,8 @@ ModalSelector.prototype.renderSelectorList = function() {
     domUserList.html('');
     $.each(this.datasource.get(), function(k,v) {
 
+        if ( $.isArray(us.config.exclude) && us.config.exclude.indexOf(v.id) != -1 ) return;
+
         var htmlRow = '<div class="row" data-itemid="'+v.id+'" style="padding:3px 0">';
         if ( us.config.options.multiselect ) { 
             htmlRow    += '<input type="checkbox" name="ModalSelectorSelected" value="'+v.id+'" />&nbsp;';
