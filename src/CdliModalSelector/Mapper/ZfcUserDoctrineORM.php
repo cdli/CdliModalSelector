@@ -12,7 +12,7 @@ class ZfcUserDoctrineORM extends \ZfcUserDoctrineORM\Mapper\User
         $resultset=array();
         foreach ($er->findBy(array()) as $v) {
             $resultset[$v->getId()] = array(
-                'id' => $v->getId(),
+                'user_id' => $v->getId(),
                 'username' => $v->getUsername(),
                 'email' => $v->getEmail(),
                 'displayName' => $v->getDisplayName(),
